@@ -1,0 +1,2 @@
+# AI4EO_Final_Project_Landslide_Scars_Detection
+Final Project for GEOL0069 AI4EO
