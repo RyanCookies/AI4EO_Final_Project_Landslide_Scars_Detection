@@ -17,7 +17,7 @@ Landslides are a significant natural hazard, often triggered by seismic events o
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-On 5th September 2022, an Mw 6.6 shallow left-lateral earthquake struck Luding, China, triggered over 5000 landslides (Ding and Wang, 2025). 
+On 5 September 2022, an Mw 6.6 shallow left-lateral earthquake struck Luding, China, triggering over 5,000 landslides (Ding and Wang, 2025). Despite the stress release along the Xianshuihe Fault caused by the Luding earthquake, historical records suggest that the southern Anninghe Fault still poses a significant seismic hazard (Wen et al., 2008). Consequently, it is important to assess the landslide hazard in the surrounding region. This project focuses on a mountainside area southeast of the epicentre, where landslides were densely concentrated. The selected site also benefits from minimal cloud coverage in both pre- and post-earthquake Sentinel-2 images, providing favourable conditions for conducting this analysis.
 
 <details>
   <summary><b>Table of Contents</b></summary>
@@ -43,4 +43,6 @@ On 5th September 2022, an Mw 6.6 shallow left-lateral earthquake struck Luding, 
 
 ## References
 Ding, Z., & Wang, C. (2025). Coseismic landslides caused by the 2022 Luding earthquake in China: Insights from remote sensing interpretations and machine learning models. Frontiers in Earth Science, 13, 1564744. https://doi.org/10.3389/feart.2025.1564744
+Wen, X., Ma, S., Xu, X., & He, Y. (2008). Historical pattern and behavior of earthquake ruptures along the eastern boundary of the Sichuan-Yunnan faulted-block, southwestern China. Physics of the Earth and Planetary Interiors, 168(1), 16–36. https://doi.org/10.1016/j.pepi.2008.04.013
+
 
