@@ -51,6 +51,10 @@ Since healthy vegetation strongly reflects near-infrared radiation and absorbs r
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Getting Started
+### Prerequisite
+### Sentinel-2 Data
+
 ## References
 Ding, Z., & Wang, C. (2025). Coseismic landslides caused by the 2022 Luding earthquake in China: Insights from remote sensing interpretations and machine learning models. Frontiers in Earth Science, 13, 1564744. https://doi.org/10.3389/feart.2025.1564744
 
