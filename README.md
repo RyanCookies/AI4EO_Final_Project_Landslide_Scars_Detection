@@ -1,6 +1,5 @@
 # AI4EO_Final_Project_Landslide_Scars_Detection
-Final Project for GEOL0069 AI4EO
-
+## About The Project
 <p align="center">
   <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/>
 </p>
