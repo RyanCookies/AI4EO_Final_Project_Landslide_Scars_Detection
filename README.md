@@ -4,6 +4,28 @@
   <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/>
 </p>
 
+<details>
+  <summary><b>Table of Contents</b></summary>
+  
+- [About The Project](#about-the-project)
+  - [Background](#background) 
+- [Getting Started](#getting-started)
+  - [Prerequisite](#prerequisite)
+  - [Sentinel-2 Data](#sentinel-2-data)
+- [Data Alignment](#data-alignment)
+- [Normalised Difference Vegetation Index (NDVI) Mask](#ndvi-mask)
+- [Unsupervised Learning](#unsupervised-learning)
+  - [Bare Soil Index (BSI)](#bsi) 
+  - [K-Means](#k-mean)
+  - [Gaussian Mixture Models (GMM)](#gaussian-mixture-models-gmm)
+- [Performance Analysis](#performance-anaylsis)
+- [Conclusion](#conclusion)
+- [Environmental Cost Assessment](#environmental-cost-assessment)
+- [Video Tutorial](#video-tutorial)
+- [References](#references)
+- [Contact](#contact)
+</details>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## About The Project
@@ -28,28 +50,6 @@ $$
 Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these two spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake allows preliminary identification of landslide-affected areas. However, since vegetation reflectance varies with local conditions, traditional threshold-based NDVI methods require prior knowledge of vegetation characteristics. To address this, this study applies unsupervised learning as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without any background knowledge of the local environment.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<details>
-  <summary><b>Table of Contents</b></summary>
-  
-- [About The Project](#about-the-project)
-  - [Background](#background) 
-- [Getting Started](#getting-started)
-  - [Prerequisite](#prerequisite)
-  - [Sentinel-2 Data](#sentinel-2-data)
-- [Data Alignment](#data-alignment)
-- [Normalised Difference Vegetation Index (NDVI) Mask](#ndvi-mask)
-- [Unsupervised Learning](#unsupervised-learning)
-  - [Bare Soil Index (BSI)](#bsi) 
-  - [K-Means](#k-mean)
-  - [Gaussian Mixture Models (GMM)](#gaussian-mixture-models-gmm)
-- [Performance Analysis](#performance-anaylsis)
-- [Conclusion](#conclusion)
-- [Environmental Cost Assessment](#environmental-cost-assessment)
-- [Video Tutorial](#video-tutorial)
-- [References](#references)
-- [Contact](#contact)
-</details>
 
 ## References
 Ding, Z., & Wang, C. (2025). Coseismic landslides caused by the 2022 Luding earthquake in China: Insights from remote sensing interpretations and machine learning models. Frontiers in Earth Science, 13, 1564744. https://doi.org/10.3389/feart.2025.1564744
