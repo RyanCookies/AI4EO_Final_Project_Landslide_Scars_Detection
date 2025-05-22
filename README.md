@@ -2,7 +2,7 @@
 Final Project for GEOL0069 AI4EO
 
 <p align="center">
-  <img src="Figures/RGB_pre_post_EQ.jpg" width="600" height="auto"/>
+  <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/>
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
