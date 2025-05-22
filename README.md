@@ -1,4 +1,4 @@
-# Coseismic Landslides Detection Using Unsupervised Learning
+# Detection of Earthquake-Induced Landslides Using Unsupervised Learning
 
 <p align="center">
   <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/>
