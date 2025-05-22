@@ -13,12 +13,12 @@
   - [Prerequisite](#prerequisite)
   - [Sentinel-2 Data](#sentinel-2-data)
 - [Data Alignment](#data-alignment)
-- [Normalised Difference Vegetation Index (NDVI) Mask](#ndvi-mask)
+- [Normalised Difference Vegetation Index (NDVI) Mask](#normalised-difference-vegetation-index-ndvi-mask)
 - [Unsupervised Learning](#unsupervised-learning)
-  - [Bare Soil Index (BSI)](#bsi) 
-  - [K-Means](#k-mean)
+  - [Bare Soil Index (BSI)](#bare-soil-index-bsi) 
+  - [K-Means](#k-means)
   - [Gaussian Mixture Models (GMM)](#gaussian-mixture-models-gmm)
-- [Performance Analysis](#performance-anaylsis)
+- [Performance Analysis](#performance-analysis)
 - [Conclusion](#conclusion)
 - [Environmental Cost Assessment](#environmental-cost-assessment)
 - [Video Tutorial](#video-tutorial)
@@ -65,7 +65,27 @@ The package should then be imported along with the other required libraries. For
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Data Alignment
+<p align="right">(<a href="#top">back to top</a>)</p>
 
+## Normalised Difference Vegetation Index (NDVI) Mask
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Unsupervised Learning
+### Bare Soil Index (BSI)
+### K-Means
+### Gaussian Mixture Models (GMM)
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Performance Analysis
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Conclusion
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Environmental Cost Assessment
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Video Tutorial
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## References
@@ -75,4 +95,5 @@ Wen, X., Ma, S., Xu, X., & He, Y. (2008). Historical pattern and behavior of ear
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+## Contact
+<p align="right">(<a href="#top">back to top</a>)</p>
