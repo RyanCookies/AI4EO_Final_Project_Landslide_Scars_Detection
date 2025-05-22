@@ -1,9 +1,11 @@
-# AI4EO_Final_Project_Landslide_Scars_Detection
-## About The Project
+# Earthquake-Induced Landslides Detection Using Unsupervised Learning
+
 <p align="center">
   <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/>
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## About The Project
 
 <details>
   <summary><b>Table of Contents</b></summary>
