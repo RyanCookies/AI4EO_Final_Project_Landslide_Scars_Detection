@@ -52,8 +52,21 @@ Since healthy vegetation strongly reflects near-infrared radiation and absorbs r
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
+This project was conducted on Google Colab, which provides free GPU access and allows storage via Google Drive. Alternatively, you may run it in a local environment, but this requires installing the necessary packages and ensuring sufficient computational resources.
 ### Prerequisite
+To read, write, and analyse geospatial raster data, the following package must be installed in Google Colab using the code below before beginning the project.
+```python
+!pip install rasterio
+```
+The package should then be imported along with the other required libraries. For a complete list of packages, please refer to Final_Project.ipynb. If you are running the code locally, ensure all required packages are properly installed.
+
 ### Sentinel-2 Data
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Data Alignment
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## References
 Ding, Z., & Wang, C. (2025). Coseismic landslides caused by the 2022 Luding earthquake in China: Insights from remote sensing interpretations and machine learning models. Frontiers in Earth Science, 13, 1564744. https://doi.org/10.3389/feart.2025.1564744
