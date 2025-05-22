@@ -6,6 +6,7 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## About The Project
+This project is the final assignment for GEOL0069: Artificial Intelligence for Earth Observation. It explores the use of unsupervised learning methods: K-means and Gaussian Mixture Models, to identify landslide scars using Sentinel-2 optical imagery acquired before and after an earthquake.
 
 <details>
   <summary><b>Table of Contents</b></summary>
