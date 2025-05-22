@@ -47,7 +47,7 @@ $$
 \text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}
 $$
 
-Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these two spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake allows preliminary identification of landslide-affected areas. However, since vegetation reflectance varies with local conditions, traditional threshold-based NDVI methods require prior knowledge of vegetation characteristics. To address this, this study applies unsupervised learning as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without any background knowledge of the local environment.
+Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake enables preliminary identification of landslide-affected areas. However, because vegetation reflectance varies with local conditions, traditional threshold-based NDVI methods require prior knowledge of vegetation characteristics. To address this limitation, this study applies unsupervised learning using K-means and Gaussian Mixture Models as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without prior knowledge of the local environment.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
