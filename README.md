@@ -10,7 +10,7 @@
 This project is the final assignment for GEOL0069: Artificial Intelligence for Earth Observation. It explores the use of unsupervised learning methods, specifically K-means and Gaussian Mixture Models, to identify landslide scars using Sentinel-2 optical imagery acquired before and after an earthquake. The complete code implementation for this project is available in the file Final_Project.ipynb.
 
 ### Background
-Landslides are a significant natural hazard, often triggered by seismic events or heavy rainfall, that can damage infrastructure and cause casualties. Therefore, rapid and reliable detection of landslide-affected areas is critical for post-disaster assessment. Moreover, landslide scars could provide insight into developing hydrogeological models to analyse the stability of the mountain slope. Satellite remote sensing provides a method for observing large-scale and inaccessible regions, with optical sensors offering valuable spectral information for detecting vegetation loss and surface disturbance. In particular, data from the Sentinel-2 satellite mission, which offers high-resolution multispectral imagery, is well suited for landslide mapping.
+Landslides are significant natural hazards, often triggered by seismic events or heavy rainfall, that can damage infrastructure and cause casualties. Therefore, rapid and reliable detection of landslide-affected areas is critical for post-disaster assessment. Moreover, landslide scars can offer valuable insight for developing hydrogeological models to assess slope stability. Satellite remote sensing enables observation over large-scale and inaccessible regions, with optical sensors providing spectral information useful for detecting vegetation loss and surface disturbance. In particular, data from the Sentinel-2 satellite mission, which offers high-resolution multispectral imagery, is well suited for landslide mapping.
 
 <p align="center">
   <img src="Figures/luding_background.jpg" width="800" height="auto"/>
@@ -19,11 +19,13 @@ Landslides are a significant natural hazard, often triggered by seismic events o
 
 On 5 September 2022, an Mw 6.6 shallow left-lateral earthquake struck Luding, China, triggering over 5,000 landslides (Ding and Wang, 2025). Despite the stress release along the Xianshuihe Fault caused by the Luding earthquake, historical records suggest that the southern Anninghe Fault still poses a significant seismic hazard (Wen et al., 2008). Consequently, it is important to assess the landslide hazard in the surrounding region. This project focuses on a mountainside area southeast of the epicentre, where landslides were densely concentrated. The selected site also benefits from minimal cloud coverage in both pre- and post-earthquake Sentinel-2 images, providing favourable conditions for conducting this analysis.
 
-A common approach using remote sensing to detect a landslide scar is to use the Normalised Difference Vegetation Index (NDVI). The index used the 
+A widely used approach for landslide scar detection via remote sensing is the Normalised Difference Vegetation Index (NDVI). 
 
 $$
 \text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}
 $$
+
+Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these two spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake allows preliminary identification of landslide-affected areas. However, since vegetation reflectance varies with local conditions, traditional threshold-based NDVI methods require prior knowledge of vegetation characteristics. To address this, this study applies unsupervised learning as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without any background knowledge of the local environment.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
