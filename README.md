@@ -19,6 +19,12 @@ Landslides are a significant natural hazard, often triggered by seismic events o
 
 On 5 September 2022, an Mw 6.6 shallow left-lateral earthquake struck Luding, China, triggering over 5,000 landslides (Ding and Wang, 2025). Despite the stress release along the Xianshuihe Fault caused by the Luding earthquake, historical records suggest that the southern Anninghe Fault still poses a significant seismic hazard (Wen et al., 2008). Consequently, it is important to assess the landslide hazard in the surrounding region. This project focuses on a mountainside area southeast of the epicentre, where landslides were densely concentrated. The selected site also benefits from minimal cloud coverage in both pre- and post-earthquake Sentinel-2 images, providing favourable conditions for conducting this analysis.
 
+A common approach using remote sensing to detect a landslide scar is to use the Normalised Difference Vegetation Index (NDVI). The index used the 
+
+$$
+\text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}
+$$
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <details>
