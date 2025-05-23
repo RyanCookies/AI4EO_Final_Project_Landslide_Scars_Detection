@@ -61,10 +61,56 @@ To read, write, and analyse geospatial raster data, the following package must b
 The package should then be imported along with the other required libraries. For a complete list of packages, please refer to Final_Project.ipynb. If you are running the code locally, ensure all required packages are properly installed.
 
 ### Sentinel-2 Data
+Sentinel-2 is a satellite mission developed by the European Space Agency (ESA) under the Copernicus Programme, designed to provide high-resolution optical imagery for land monitoring. It captures data in 13 spectral bands ranging from visible to shortwave infrared, with spatial resolutions of 10, 20, and 60 metres depending on the band. This study uses Level-2A (L2A) products, which provide bottom-of-atmosphere (BOA) reflectance data derived from Level-1C top-of-atmosphere (TOA) imagery through atmospheric correction (European Space Agency, n.d.).
+
+To fetch the data, you must create an account on the Copernicus Open Access Hub and input your login credentials in the "Fetching Data" section of the code.
+
+```python
+# --- Authenticate with Copernicus Data Space ---
+username = "your_username"
+password = "your_password"
+access_token, refresh_token = get_access_and_refresh_token(username, password)
+
+# --- Define Time Ranges for Pre- and Post-earthquake ---
+pre_eq_start_date = "2021-11-05"
+pre_eq_end_date = "2021-11-06"
+post_eq_start_date = "2022-11-20"
+post_eq_end_date = "2022-11-21"
+
+# --- Query Sentinel-2 Products Covering 2022 Luding Earthquake Affected Area ---
+pre_eq_sentinel2_data = query_sentinel2_luding_data(
+    pre_eq_start_date, pre_eq_end_date, access_token
+)
+
+post_eq_sentinel2_data = query_sentinel2_luding_data(
+    post_eq_start_date, post_eq_end_date, access_token
+)
+
+# --- Download the Selected Sentinel-2 Product for Each Time Range ---
+download_dir = "/content/drive/MyDrive/GEOL0069_AI4EO/Final_Project/"  # Define download directory
+
+# Download Pre-Earthquake Product
+product_id = pre_eq_sentinel2_data['Id'][0]
+file_name = pre_eq_sentinel2_data['Name'][0]
+download_single_product(product_id, file_name, access_token, download_dir)
+
+# Download Post-Earthquake Product
+product_id = post_eq_sentinel2_data['Id'][0]
+file_name = post_eq_sentinel2_data['Name'][0]
+download_single_product(product_id, file_name, access_token, download_dir)
+```
+The downloaded file will be in ZIP format. To access the data, unzip the file in the directory where it was saved.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Data Alignment
+The Sentinel-2 images used in this study exhibited spatial misalignment, particularly when comparing pre- and post-event scenes. These discrepancies can affect pixel-level correspondence and must be corrected through image registration or coregistration techniques to ensure reliable change detection. Therefore, Enhanced Correlation Coefficient (ECC) alignment was applied to the post-earthquake image, using the pre-earthquake image as the reference. The alignment result is shown below:
+
+<p align="center">
+  <img src="Figures/RGB_pre_post_aligned_EQ_masked.jpg" width="800" height="auto"/>
+  <figcaption style="text-align:center;">The pre-earthquake, unaligned post-earthquake, and aligned post-earthquake RGB images for the region of interest in this study.</figcaption>
+</p>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Normalised Difference Vegetation Index (NDVI) Mask
@@ -90,6 +136,8 @@ The package should then be imported along with the other required libraries. For
 
 ## References
 Ding, Z., & Wang, C. (2025). Coseismic landslides caused by the 2022 Luding earthquake in China: Insights from remote sensing interpretations and machine learning models. Frontiers in Earth Science, 13, 1564744. https://doi.org/10.3389/feart.2025.1564744
+
+European Space Agency. (n.d.). SENTINEL-2 Documents. SentiWiki. https://sentiwiki.copernicus.eu/web/document-library#Library-S2-Documents
 
 Wen, X., Ma, S., Xu, X., & He, Y. (2008). Historical pattern and behavior of earthquake ruptures along the eastern boundary of the Sichuan-Yunnan faulted-block, southwestern China. Physics of the Earth and Planetary Interiors, 168(1), 16–36. https://doi.org/10.1016/j.pepi.2008.04.013
 
