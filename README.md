@@ -201,6 +201,7 @@ To analyse the performance of the four models, the NDVI-derived landslide mask w
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Conclusion
+The model results show that, in terms of distinguishing vegetation and bare soil, using three clusters for K-means and three components for GMM yields significantly better performance. However, when comparing the pre- and post-earthquake classifications for landslide scar detection, all models perform similarly, each achieving an accuracy score above 0.9. Therefore, the number of clusters or components can be selected based on the specific objective of the study: for landslide scar detection using multi-temporal imagery, two clusters or components are sufficient; for distinguishing vegetation and bare soil from a single-date image, three clusters or components are recommended to improve classification accuracy.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Environmental Cost Assessment
