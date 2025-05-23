@@ -32,7 +32,7 @@
 This project is the final assignment for GEOL0069: Artificial Intelligence for Earth Observation. It explores the use of unsupervised learning methods, specifically K-means and Gaussian Mixture Models, to identify landslide scars using Sentinel-2 optical imagery acquired before and after an earthquake. The complete code implementation for this project is available in the file Final_Project.ipynb.
 
 ### Background
-Landslides are significant natural hazards, often triggered by seismic events or heavy rainfall, that can damage infrastructure and cause casualties. Therefore, rapid and reliable detection of landslide-affected areas is critical for post-disaster assessment. Moreover, landslide scars can offer valuable insight for developing hydrogeological models to assess slope stability. Satellite remote sensing enables observation over large-scale and inaccessible regions, with optical sensors providing spectral information useful for detecting vegetation loss and surface disturbance. In particular, data from the Sentinel-2 satellite mission, which offers high-resolution multispectral imagery, is well suited for landslide mapping.
+Landslides are significant natural hazards, often triggered by seismic events or heavy rainfall, that can damage infrastructure and cause casualties. Therefore, rapid and reliable detection of landslide-affected areas is critical for post-disaster assessment. Moreover, landslide scars can offer valuable insight for developing hydrogeological models to assess slope stability (Montgomery & Dietrich, 1994). Satellite remote sensing enables observation over large-scale and inaccessible regions, with optical sensors providing spectral information useful for detecting vegetation loss and surface disturbance. In particular, data from the Sentinel-2 satellite mission, which offers high-resolution multispectral imagery, is well suited for landslide mapping.
 
 <div align="center">
   <figure>
@@ -44,13 +44,13 @@ Landslides are significant natural hazards, often triggered by seismic events or
 
 On 5 September 2022, an Mw 6.6 shallow left-lateral earthquake struck Luding, China, triggering over 5,000 landslides (Ding and Wang, 2025). Despite the stress release along the Xianshuihe Fault caused by the Luding earthquake, historical records suggest that the southern Anninghe Fault still poses a significant seismic hazard (Wen et al., 2008). Consequently, it is important to assess the landslide hazard in the surrounding region. This project focuses on a mountainside area southeast of the epicentre, where landslides were densely concentrated. The selected site also benefits from minimal cloud coverage in both pre- and post-earthquake Sentinel-2 images, providing favourable conditions for conducting this analysis.
 
-A widely used approach for landslide scar detection via remote sensing is the Normalised Difference Vegetation Index (NDVI). 
+A widely used approach for landslide scar detection via remote sensing is the Normalised Difference Vegetation Index (NDVI) (Kriegler et al., 1969). 
 
 $$
 \text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}
 $$
 
-Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake enables preliminary identification of landslide-affected areas. However, because vegetation reflectance varies with local conditions, the traditional threshold-based NDVI method require prior knowledge of vegetation characteristics. To address this limitation, this study applies unsupervised learning using K-means and Gaussian Mixture Models as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without prior knowledge of the local environment.
+Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake enables preliminary identification of landslide-affected areas (e.g., Saito et al., 2022; Yunus et al., 2020). However, because vegetation reflectance varies with local conditions, the traditional threshold-based NDVI method requires prior knowledge of vegetation characteristics (Yang et al., 2019). To address this limitation, this study applies unsupervised learning using K-means and Gaussian Mixture Models as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without prior knowledge of the local environment.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -107,7 +107,7 @@ The downloaded file will be in ZIP format. To access the data, unzip the file in
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Data Alignment
-The Sentinel-2 images used in this study exhibited spatial misalignment, particularly when comparing pre- and post-event scenes. These discrepancies can affect pixel-level correspondence and must be corrected through image registration or coregistration techniques to ensure reliable change detection. Therefore, Enhanced Correlation Coefficient (ECC) alignment was applied to the post-earthquake image, using the pre-earthquake image as the reference. The alignment result is shown below:
+The Sentinel-2 images used in this study exhibited spatial misalignment, particularly when comparing pre- and post-event scenes. These discrepancies can affect pixel-level correspondence and must be corrected through image registration or coregistration techniques to ensure reliable change detection. Therefore, Enhanced Correlation Coefficient (ECC) alignment (Evangelidis & Psarakis, 2008) was applied to the post-earthquake image, using the pre-earthquake image as the reference. The alignment result is shown below:
 
 <div align="center">
   <figure>  
@@ -133,7 +133,7 @@ After aligning the pre- and post-earthquake images, a ground truth was defined u
 Since using raw band data to detect landslide scars produced unsatisfactory results, and given that this project aims to eliminate the need for predefined thresholds in traditional methods, NDVI and another index, the Bare Soil Index (BSI), were retained as input features for the unsupervised learning approach instead of being replaced by raw band values.
 
 ### Bare Soil Index (BSI)
-Since bare soil typically reflects more light in the red and blue bands than vegetated areas, and exhibits strong reflectance in the SWIR region while showing low reflectance in the NIR region, combining these spectral characteristics helps identify the presence of bare soil.
+Since bare soil typically reflects more light in the red and blue bands than vegetated areas, and exhibits strong reflectance in the SWIR region while showing low reflectance in the NIR region, combining these spectral characteristics helps identify the presence of bare soil (Roy et al., 1996).
 
 $$
 \text{BSI} = \frac{(\text{SWIR} + \text{Red}) - (\text{NIR} + \text{Blue})}{(\text{SWIR} + \text{Red}) + (\text{NIR} + \text{Blue})}
@@ -208,11 +208,25 @@ Ding, Z., & Wang, C. (2025). Coseismic landslides caused by the 2022 Luding eart
 
 European Space Agency. (n.d.). SENTINEL-2 Documents. SentiWiki. https://sentiwiki.copernicus.eu/web/document-library#Library-S2-Documents
 
+Evangelidis, G. D., & Psarakis, E. Z. (2008). Parametric Image Alignment Using Enhanced Correlation Coefficient Maximization. IEEE Transactions on Pattern Analysis and Machine Intelligence, 30(10), 1858–1865. https://doi.org/10.1109/TPAMI.2008.113
+
+Kriegler, F., Malila, W., Nalepka, R., & Richardson, W. (1969). Preprocessing transformations and their effect on multispectral recognition. Proceedings of the 6th International Symposium on Remote Sensing of Environment. Ann Arbor, MI: University of Michigan, 97-131.
+
 MacQueen, J. (1967). Some methods for classification and analysis of multivariate observations. In Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Statistics: Vol. 5.1 (pp. 281–298). University of California Press. https://projecteuclid.org/ebooks/berkeley-symposium-on-mathematical-statistics-and-probability/Proceedings-of-the-Fifth-Berkeley-Symposium-on-Mathematical-Statistics-and/chapter/Some-methods-for-classification-and-analysis-of-multivariate-observations/bsmsp/1200512992
+
+Montgomery, D. R., & Dietrich, W. E. (1994). A physically based model for the topographic control on shallow landsliding. Water Resources Research, 30(4), 1153–1171. https://doi.org/10.1029/93WR02979
 
 Reynolds, D. (2009). Gaussian Mixture Models. In S. Z. Li & A. Jain (Eds.), Encyclopedia of Biometrics (pp. 659–663). Springer US. https://doi.org/10.1007/978-0-387-73003-5_196
 
+Roy, P. S., Sharma, K. P., & Jain, A. (1996). Stratification of density in dry deciduous forest using satellite remote sensing digital data—An approach based on spectral indices. Journal of Biosciences, 21(5), 723–734. https://doi.org/10.1007/BF02703148
+
+Saito, H., Uchiyama, S., & Teshirogi, K. (2022). Rapid vegetation recovery at landslide scars detected by multitemporal high-resolution satellite imagery at Aso volcano, Japan. Geomorphology, 398, 107989. https://doi.org/10.1016/j.geomorph.2021.107989
+
 Wen, X., Ma, S., Xu, X., & He, Y. (2008). Historical pattern and behavior of earthquake ruptures along the eastern boundary of the Sichuan-Yunnan faulted-block, southwestern China. Physics of the Earth and Planetary Interiors, 168(1), 16–36. https://doi.org/10.1016/j.pepi.2008.04.013
+
+Yang, W., Wang, Y., Sun, S., Wang, Y., & Ma, C. (2019). Using Sentinel-2 time series to detect slope movement before the Jinsha River landslide. Landslides, 16(7), 1313–1324. https://doi.org/10.1007/s10346-019-01178-8
+
+Yunus, A. P., Fan, X., Tang, X., Jie, D., Xu, Q., & Huang, R. (2020). Decadal vegetation succession from MODIS reveals the spatio-temporal evolution of post-seismic landsliding after the 2008 Wenchuan earthquake. Remote Sensing of Environment, 236, 111476. https://doi.org/10.1016/j.rse.2019.111476
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
