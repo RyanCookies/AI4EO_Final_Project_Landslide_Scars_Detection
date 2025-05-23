@@ -191,6 +191,12 @@ To analyse the performance of the four models, the NDVI-derived landslide mask w
   </figure>
 </div>
 <br>
+<div align="center">
+  <figure>  
+  <img src="Figures/all_mask_overlay.jpg" width="1200" height="auto"/><br>
+  <figcaption style="text-align:center;">Post-earthquake true-colour imagery and classification overlays. The six panels include: (1) the original post-earthquake true-colour image, (2) the NDVI-derived landslide mask, (3) K-means clustering with two clusters, (4) K-means with three clusters, (5) Gaussian Mixture Model (GMM) with two components, and (6) GMM with three components.</figcaption>
+  </figure>
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
