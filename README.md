@@ -57,9 +57,10 @@ Since healthy vegetation strongly reflects near-infrared radiation and absorbs r
 ## Getting Started
 This project was conducted on Google Colab, which provides free GPU access and allows storage via Google Drive. Alternatively, you may run it in a local environment, but this requires installing the necessary packages and ensuring sufficient computational resources.
 ### Prerequisite
-To read, write, and analyse geospatial raster data, the following package must be installed in Google Colab using the code below before beginning the project.
+To read, write, and analyse geospatial raster data, the rasterio package must be installed in Google Colab using the code below before beginning the project. To estimate the carbon emission of this project, the package codecarbon will also need to be installed.
 ```python
 !pip install rasterio
+!pip install codecarbon
 ```
 The package should then be imported along with the other required libraries. For a complete list of packages, please refer to Final_Project.ipynb. If you are running the code locally, ensure all required packages are properly installed.
 
@@ -205,6 +206,12 @@ The model results show that, in terms of distinguishing vegetation and bare soil
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Environmental Cost Assessment
+To estimate the carbon footprint of this project, the codecarbon package was implemented at the beginning of the workflow to track energy consumption throughout each step. Based on the estimation:
+
+- 5.8 g of carbon dioxide (CO2) was emitted
+- 0.009029 kWh of electricity was consumed
+
+According to Greenhouse Gas Reporting: Conversion Factors 2022 (Department for Energy Security and Net Zero, 2022), a petrol car emits approximately 170 g CO2 per kilometre, while a domestic flight emits about 246 g CO2 per kilometre. The low emissions of this project may be attributed to its relatively low computational demand and the use of a CPU-based runtime in Google Colab. However, as the estimate is based on a single execution of the final code, it likely underrepresents the total environmental cost incurred during the development process. Accounting for trial-and-error iterations, a rough estimate assumes 30 times the energy consumption, resulting in approximately 174 g of CO2. An additional source of indirect energy use in this project is the use of ChatGPT, as AI tools are permitted for assistive tasks in this module. ChatGPT was used for debugging code and refining the grammar of this README file. Nevertheless, compared to the emissions associated with traditional field-based measurements, the use of remote sensing and artificial intelligence offers a significantly lower-carbon alternative for landslide mapping and analysis.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Video Tutorial
