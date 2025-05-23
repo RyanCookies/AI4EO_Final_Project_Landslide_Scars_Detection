@@ -139,12 +139,12 @@ K-means clustering divides a dataset into k predefined groups (or clusters). It 
 In this project, two cases were analysed using two and three clusters, respectively, to evaluate whether adding an additional cluster improves performance by reducing the misclassification of vegetation with varying reflectance as bare soil.
 
 <p align="center">
-  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <img src="Figures/kmeans-2-cluster.jpg" width="1200" height="auto"/>
   <figcaption style="text-align:center;">Landslide scar detection using K-means clustering with two clusters..</figcaption>
 </p>
 
 <p align="center">
-  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <img src="Figures/kmeans-3-cluster.jpg" width="1200" height="auto"/>
   <figcaption style="text-align:center;">Landslide scar detection using K-means clustering with three clusters.</figcaption>
 </p>
 
