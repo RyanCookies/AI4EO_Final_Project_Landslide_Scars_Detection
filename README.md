@@ -47,7 +47,7 @@ $$
 \text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}
 $$
 
-Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake enables preliminary identification of landslide-affected areas. However, because vegetation reflectance varies with local conditions, traditional threshold-based NDVI methods require prior knowledge of vegetation characteristics. To address this limitation, this study applies unsupervised learning using K-means and Gaussian Mixture Models as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without prior knowledge of the local environment.
+Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake enables preliminary identification of landslide-affected areas. However, because vegetation reflectance varies with local conditions, the traditional threshold-based NDVI method require prior knowledge of vegetation characteristics. To address this limitation, this study applies unsupervised learning using K-means and Gaussian Mixture Models as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without prior knowledge of the local environment.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -61,7 +61,7 @@ To read, write, and analyse geospatial raster data, the following package must b
 The package should then be imported along with the other required libraries. For a complete list of packages, please refer to Final_Project.ipynb. If you are running the code locally, ensure all required packages are properly installed.
 
 ### Sentinel-2 Data
-Sentinel-2 is a satellite mission developed by the European Space Agency (ESA) under the Copernicus Programme, designed to provide high-resolution optical imagery for land monitoring. It captures data in 13 spectral bands ranging from visible to shortwave infrared, with spatial resolutions of 10, 20, and 60 metres depending on the band. This study uses Level-2A (L2A) products, which provide bottom-of-atmosphere (BOA) reflectance data derived from Level-1C top-of-atmosphere (TOA) imagery through atmospheric correction (European Space Agency, n.d.).
+Sentinel-2 is a satellite mission developed by the European Space Agency (ESA) under the Copernicus Programme, designed to provide high-resolution optical imagery for land monitoring. It captures data in 13 spectral bands ranging from visible to shortwave infrared, with spatial resolutions of 10, 20, and 60 metres depending on the band. This study uses Level-2A (L2A) products, which provide bottom-of-atmosphere (BOA) reflectance data derived from Level-1C top-of-atmosphere (TOA) imagery through atmospheric correction (European Space Agency, n.d.). Since this project requires the shortwave infrared (SWIR) bands, which are not available at 10-metre resolution, all bands were processed at 20-metre resolution to ensure consistency.
 
 To fetch the data, you must create an account on the Copernicus Open Access Hub and input your login credentials in the "Fetching Data" section of the code.
 
@@ -114,6 +114,13 @@ The Sentinel-2 images used in this study exhibited spatial misalignment, particu
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Normalised Difference Vegetation Index (NDVI) Mask
+After aligning the pre- and post-earthquake images, a ground truth was defined using a traditional threshold-based NDVI method. Areas with a decrease in NDVI greater than 0.2 (i.e. $\Delta NDVI < –0.2$ ), indicating vegetation loss, were identified and used to generate a landslide scar mask.
+
+<p align="center">
+  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <figcaption style="text-align:center;">The NDVI of pre-earthquake and aligned post-earthquake and the NDVI mask.</figcaption>
+</p>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Unsupervised Learning
