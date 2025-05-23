@@ -34,10 +34,13 @@ This project is the final assignment for GEOL0069: Artificial Intelligence for E
 ### Background
 Landslides are significant natural hazards, often triggered by seismic events or heavy rainfall, that can damage infrastructure and cause casualties. Therefore, rapid and reliable detection of landslide-affected areas is critical for post-disaster assessment. Moreover, landslide scars can offer valuable insight for developing hydrogeological models to assess slope stability. Satellite remote sensing enables observation over large-scale and inaccessible regions, with optical sensors providing spectral information useful for detecting vegetation loss and surface disturbance. In particular, data from the Sentinel-2 satellite mission, which offers high-resolution multispectral imagery, is well suited for landslide mapping.
 
-<p align="center">
-  <img src="Figures/luding_background.jpg" width="800" height="auto"/>
+<div align="center">
+  <figure>
+  <img src="Figures/luding_background.jpg" width="800" height="auto"/><br>
   <figcaption style="text-align:center;">The location of the 2022 Luding earthquake and the region of interest of this study. The map is retrieved from Ding and Wang (2025).</figcaption>
-</p>
+  </figure>
+</div>
+<br>
 
 On 5 September 2022, an Mw 6.6 shallow left-lateral earthquake struck Luding, China, triggering over 5,000 landslides (Ding and Wang, 2025). Despite the stress release along the Xianshuihe Fault caused by the Luding earthquake, historical records suggest that the southern Anninghe Fault still poses a significant seismic hazard (Wen et al., 2008). Consequently, it is important to assess the landslide hazard in the surrounding region. This project focuses on a mountainside area southeast of the epicentre, where landslides were densely concentrated. The selected site also benefits from minimal cloud coverage in both pre- and post-earthquake Sentinel-2 images, providing favourable conditions for conducting this analysis.
 
@@ -106,10 +109,13 @@ The downloaded file will be in ZIP format. To access the data, unzip the file in
 ## Data Alignment
 The Sentinel-2 images used in this study exhibited spatial misalignment, particularly when comparing pre- and post-event scenes. These discrepancies can affect pixel-level correspondence and must be corrected through image registration or coregistration techniques to ensure reliable change detection. Therefore, Enhanced Correlation Coefficient (ECC) alignment was applied to the post-earthquake image, using the pre-earthquake image as the reference. The alignment result is shown below:
 
-<p align="center">
-  <img src="Figures/RGB_pre_post_aligned_EQ.jpg" width="1200" height="auto"/>
+<div align="center">
+  <figure>  
+  <img src="Figures/RGB_pre_post_aligned_EQ.jpg" width="1200" height="auto"/><br>
   <figcaption style="text-align:center;">The pre-earthquake, unaligned post-earthquake, and aligned post-earthquake RGB images for the region of interest in this study.</figcaption>
-</p>
+  </figure>
+</div>
+<br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -138,40 +144,53 @@ K-means clustering divides a dataset into k predefined groups (or clusters). It 
 
 In this project, two cases were analysed using two and three clusters, respectively, to evaluate whether adding an additional cluster improves performance by reducing the misclassification of vegetation with varying reflectance as bare soil.
 
-<p align="center">
-  <img src="Figures/kmeans_2_cluster.jpg" width="1200" height="auto"/>
+<div align="center">
+  <figure>  
+  <img src="Figures/kmeans_2_cluster.jpg" width="1200" height="auto"/><br>
   <figcaption style="text-align:center;">Landslide scar detection using K-means clustering with two clusters.</figcaption>
-</p>
-
-<p align="center">
-  <img src="Figures/kmeans_3_cluster.jpg" width="1200" height="auto"/>
+  </figure>
+</div>
+<br>
+<div align="center">
+  <figure>  
+  <img src="Figures/kmeans_3_cluster.jpg" width="1200" height="auto"/><br>
   <figcaption style="text-align:center;">Landslide scar detection using K-means clustering with three clusters.</figcaption>
-</p>
+  </figure>
+</div>
+<br>
 
 ### Gaussian Mixture Models (GMM)
 Gaussian Mixture Models (GMMs) are probabilistic models for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions by combining simpler ones (From AI4EO_Week_4_Unsupervised_Learning Repository).
 
 Similar to the K-means approach, the Gaussian Mixture Model was applied with two and three components to assess whether increasing the number of clusters improves classification performance.
 
-<p align="center">
-  <img src="Figures/gmm_2_component.jpg" width="1200" height="auto"/>
+<div align="center">
+  <figure>  
+  <img src="Figures/gmm_2_component.jpg" width="1200" height="auto"/><br>
   <figcaption style="text-align:center;">Landslide scar detection using Gaussian Mixture Model (GMM) clustering with two components.</figcaption>
-</p>
-
-<p align="center">
-  <img src="Figures/gmm_3_component.jpg" width="1200" height="auto"/>
+  </figure>
+</div>
+<br>
+<div align="center">
+  <figure>  
+  <img src="Figures/gmm_3_component.jpg" width="1200" height="auto"/><br>
   <figcaption style="text-align:center;">Landslide scar detection using Gaussian Mixture Model (GMM) clustering with three components.</figcaption>
-</p>
+  </figure>
+</div>
+<br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Performance Analysis
 To analyse the performance of the four models, the NDVI-derived landslide mask was used as a reference for evaluating the classification results from the K-means and Gaussian Mixture Model (GMM) methods. Confusion matrices were computed to assess agreement between the model predictions and the reference. Additional performance metrics, including accuracy scores and classification reports, are provided in the code. Finally, all predicted masks were overlaid on the post-earthquake true-colour image to enable visual comparison of detection performance.
 
-<p align="center">
-  <img src="Figures/all_confusion_matrix.jpg" width="800" height="auto"/>
+<div align="center">
+  <figure>  
+  <img src="Figures/all_confusion_matrix.jpg" width="800" height="auto"/><br>
   <figcaption style="text-align:center;">Confusion matrices for all models.</figcaption>
-</p>
+  </figure>
+</div>
+<br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
