@@ -107,7 +107,7 @@ The downloaded file will be in ZIP format. To access the data, unzip the file in
 The Sentinel-2 images used in this study exhibited spatial misalignment, particularly when comparing pre- and post-event scenes. These discrepancies can affect pixel-level correspondence and must be corrected through image registration or coregistration techniques to ensure reliable change detection. Therefore, Enhanced Correlation Coefficient (ECC) alignment was applied to the post-earthquake image, using the pre-earthquake image as the reference. The alignment result is shown below:
 
 <p align="center">
-  <img src="Figures/RGB_pre_post_aligned_EQ.jpg" width="800" height="auto"/>
+  <img src="Figures/RGB_pre_post_aligned_EQ.jpg" width="1200" height="auto"/>
   <figcaption style="text-align:center;">The pre-earthquake, unaligned post-earthquake, and aligned post-earthquake RGB images for the region of interest in this study.</figcaption>
 </p>
 
