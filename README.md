@@ -211,13 +211,15 @@ To estimate the carbon footprint of this project, the codecarbon package was imp
 - 5.8 g of carbon dioxide (CO2) was emitted
 - 0.009029 kWh of electricity was consumed
 
-According to Greenhouse Gas Reporting: Conversion Factors 2022 (Department for Energy Security and Net Zero, 2022), a petrol car emits approximately 170 g CO2 per kilometre, while a domestic flight emits about 246 g CO2 per kilometre. The low emissions of this project may be attributed to its relatively low computational demand and the use of a CPU-based runtime in Google Colab. However, as the estimate is based on a single execution of the final code, it likely underrepresents the total environmental cost incurred during the development process. Accounting for trial-and-error iterations, a rough estimate assumes 30 times the energy consumption, resulting in approximately 174 g of CO2. An additional source of indirect energy use in this project is the use of ChatGPT, as AI tools are permitted for assistive tasks in this module. ChatGPT was used for debugging code and refining the grammar of this README file. Nevertheless, compared to the emissions associated with traditional field-based measurements, the use of remote sensing and artificial intelligence offers a significantly lower-carbon alternative for landslide mapping and analysis.
+According to Greenhouse Gas Reporting: Conversion Factors 2022 (Department for Energy Security and Net Zero & Department for Business, Energy & Industrial Strategy, 2022), a petrol car emits approximately 170 g CO2 per kilometre, while a domestic flight emits about 246 g CO2 per kilometre. The low emissions of this project may be attributed to its relatively low computational demand and the use of a CPU-based runtime in Google Colab. However, as the estimate is based on a single execution of the final code, it likely underrepresents the total environmental cost incurred during the development process. Accounting for trial-and-error iterations, a rough estimate assumes 30 times the energy consumption, resulting in approximately 174 g of CO2. An additional source of indirect energy use in this project is the use of ChatGPT, as AI tools are permitted for assistive tasks in this module. ChatGPT was used for debugging code and refining the grammar of this README file. Nevertheless, compared to the emissions associated with traditional field-based measurements, the use of remote sensing and artificial intelligence offers a significantly lower-carbon alternative for landslide mapping and analysis.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Video Tutorial
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## References
+Department for Energy Security and Net Zero & Department for Business, Energy & Industrial Strategy. (2022, September 20). Greenhouse gas reporting: Conversion factors 2022. GOV.UK. https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022
+
 Ding, Z., & Wang, C. (2025). Coseismic landslides caused by the 2022 Luding earthquake in China: Insights from remote sensing interpretations and machine learning models. Frontiers in Earth Science, 13, 1564744. https://doi.org/10.3389/feart.2025.1564744
 
 European Space Agency. (n.d.). SENTINEL-2 Documents. SentiWiki. https://sentiwiki.copernicus.eu/web/document-library#Library-S2-Documents
