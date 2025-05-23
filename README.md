@@ -124,9 +124,45 @@ After aligning the pre- and post-earthquake images, a ground truth was defined u
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Unsupervised Learning
+Since using raw band data to detect landslide scars produced unsatisfactory results, and given that this project aims to eliminate the need for predefined thresholds in traditional methods, NDVI and another index, the Bare Soil Index (BSI), were retained as input features for the unsupervised learning approach instead of being replaced by raw band values.
+
 ### Bare Soil Index (BSI)
+Since bare soil typically reflects more light in the red and blue bands than vegetated areas, and exhibits strong reflectance in the SWIR region while showing low reflectance in the NIR region, combining these spectral characteristics helps identify the presence of bare soil.
+
+$$
+\text{BSI} = \frac{(\text{SWIR} + \text{Red}) - (\text{NIR} + \text{Blue})}{(\text{SWIR} + \text{Red}) + (\text{NIR} + \text{Blue})}
+$$
+
 ### K-Means
+K-means clustering divides a dataset into k predefined groups (or clusters). It classifies the data points based on their similarity to the features of the data (MacQueen, 1967). The basic idea is to define k centroids, one for each cluster, and assign each data point to the nearest centroid while keeping the centroids as small as possible (From AI4EO_Week_4_Unsupervised_Learning Repository).
+
+In this project, two cases were analysed using two and three clusters, respectively, to evaluate whether adding an additional cluster improves performance by reducing the misclassification of vegetation with varying reflectance as bare soil.
+
+<p align="center">
+  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <figcaption style="text-align:center;">Landslide scar detection using K-means clustering with two clusters..</figcaption>
+</p>
+
+<p align="center">
+  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <figcaption style="text-align:center;">Landslide scar detection using K-means clustering with three clusters.</figcaption>
+</p>
+
 ### Gaussian Mixture Models (GMM)
+Gaussian Mixture Models (GMMs) are probabilistic models for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions by combining simpler ones (From AI4EO_Week_4_Unsupervised_Learning Repository).
+
+Similar to the K-means approach, the Gaussian Mixture Model was applied with two and three components to assess whether increasing the number of clusters improves classification performance.
+
+<p align="center">
+  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <figcaption style="text-align:center;">Landslide scar detection using Gaussian Mixture Model (GMM) clustering with two components.</figcaption>
+</p>
+
+<p align="center">
+  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <figcaption style="text-align:center;">Landslide scar detection using Gaussian Mixture Model (GMM) clustering with three components.</figcaption>
+</p>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Performance Analysis
@@ -145,6 +181,10 @@ After aligning the pre- and post-earthquake images, a ground truth was defined u
 Ding, Z., & Wang, C. (2025). Coseismic landslides caused by the 2022 Luding earthquake in China: Insights from remote sensing interpretations and machine learning models. Frontiers in Earth Science, 13, 1564744. https://doi.org/10.3389/feart.2025.1564744
 
 European Space Agency. (n.d.). SENTINEL-2 Documents. SentiWiki. https://sentiwiki.copernicus.eu/web/document-library#Library-S2-Documents
+
+MacQueen, J. (1967). Some methods for classification and analysis of multivariate observations. In Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Statistics: Vol. 5.1 (pp. 281–298). University of California Press. https://projecteuclid.org/ebooks/berkeley-symposium-on-mathematical-statistics-and-probability/Proceedings-of-the-Fifth-Berkeley-Symposium-on-Mathematical-Statistics-and/chapter/Some-methods-for-classification-and-analysis-of-multivariate-observations/bsmsp/1200512992
+
+Reynolds, D. (2009). Gaussian Mixture Models. In S. Z. Li & A. Jain (Eds.), Encyclopedia of Biometrics (pp. 659–663). Springer US. https://doi.org/10.1007/978-0-387-73003-5_196
 
 Wen, X., Ma, S., Xu, X., & He, Y. (2008). Historical pattern and behavior of earthquake ruptures along the eastern boundary of the Sichuan-Yunnan faulted-block, southwestern China. Physics of the Earth and Planetary Interiors, 168(1), 16–36. https://doi.org/10.1016/j.pepi.2008.04.013
 
