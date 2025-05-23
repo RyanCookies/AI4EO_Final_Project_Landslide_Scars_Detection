@@ -169,7 +169,7 @@ Similar to the K-means approach, the Gaussian Mixture Model was applied with two
 To analyse the performance of the four models, the NDVI-derived landslide mask was used as a reference for evaluating the classification results from the K-means and Gaussian Mixture Model (GMM) methods. Confusion matrices were computed to assess agreement between the model predictions and the reference. Additional performance metrics, including accuracy scores and classification reports, are provided in the code. Finally, all predicted masks were overlaid on the post-earthquake true-colour image to enable visual comparison of detection performance.
 
 <p align="center">
-  <img src="Figures/all_confusion_matrix.jpg" width="1200" height="auto"/>
+  <img src="Figures/all_confusion_matrix.jpg" width="800" height="auto"/>
   <figcaption style="text-align:center;">Confusion matrices for all models.</figcaption>
 </p>
 
