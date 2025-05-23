@@ -154,12 +154,12 @@ Gaussian Mixture Models (GMMs) are probabilistic models for representing normall
 Similar to the K-means approach, the Gaussian Mixture Model was applied with two and three components to assess whether increasing the number of clusters improves classification performance.
 
 <p align="center">
-  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <img src="Figures/gmm_2_component.jpg" width="1200" height="auto"/>
   <figcaption style="text-align:center;">Landslide scar detection using Gaussian Mixture Model (GMM) clustering with two components.</figcaption>
 </p>
 
 <p align="center">
-  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+  <img src="Figures/gmm_3_component.jpg" width="1200" height="auto"/>
   <figcaption style="text-align:center;">Landslide scar detection using Gaussian Mixture Model (GMM) clustering with three components.</figcaption>
 </p>
 
