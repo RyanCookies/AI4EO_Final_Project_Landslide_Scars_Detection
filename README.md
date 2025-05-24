@@ -11,7 +11,8 @@
   <summary><b>Table of Contents</b></summary>
   
 - [About The Project](#about-the-project)
-  - [Background](#background) 
+  - [Background](#background)
+  - [Study Area and Date](#study-area-and-date)
 - [Getting Started](#getting-started)
   - [Prerequisite](#prerequisite)
   - [Sentinel-2 Data](#sentinel-2-data)
@@ -55,9 +56,19 @@ $$
 
 Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake enables preliminary identification of landslide-affected areas (e.g., Saito et al., 2022; Yunus et al., 2020). However, because vegetation reflectance varies with local conditions, the traditional threshold-based NDVI method requires prior knowledge of vegetation characteristics (Yang et al., 2019). To address this limitation, this study applies unsupervised learning using K-means and Gaussian Mixture Models as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without prior knowledge of the local environment.
 
-<p align="center">
-  <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/>
-</p>
+### Study Area & Date
+A 300 m × 350 m rectangular region located southeast of the epicentre (29.59°N, 102.08°E).
+To minimise the seasonal differences in vegetation and ensure low cloud coverage, the following dates were selected:
+- 05/11/2021
+- 20/11/2022
+
+<div align="center">
+  <figure>
+  <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/><br>
+  <figcaption style="text-align:center;">RGB images of the region of interest before and after the 2022 Luding earthquake.</figcaption>
+  </figure>
+</div>
+<br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
