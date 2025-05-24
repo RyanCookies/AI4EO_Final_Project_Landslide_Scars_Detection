@@ -210,9 +210,7 @@ $$
 $$
 
 ### K-Means
-K-means clustering divides a dataset into k predefined groups (or clusters). It classifies the data points based on their similarity to the features of the data (MacQueen, 1967). The basic idea is to define k centroids, one for each cluster, and assign each data point to the nearest centroid while keeping the centroids as small as possible (From AI4EO_Week_4_Unsupervised_Learning Repository).
-
-In this project, two cases were analysed using two and three clusters, respectively, to evaluate whether adding an additional cluster improves performance by reducing the misclassification of vegetation with varying reflectance as bare soil.
+K-means clustering is an unsupervised learning algorithm that partitions a dataset into k predefined clusters based on feature similarity (MacQueen, 1967). The algorithm assigns each data point to the nearest centroid, aiming to minimise within-cluster variance. In this project, K-means clustering was applied to differentiate landslide scars from non-affected areas based on NDVI and BSI indices derived from pre- and post-earthquake Sentinel-2 imagery. Two scenarios were examined: clustering with two and three clusters, respectively. This approach was used to assess whether adding an extra cluster improves performance, particularly by reducing misclassification of vegetation with varying reflectance as bare soil.
 
 <div align="center">
   <figure>  
@@ -230,9 +228,7 @@ In this project, two cases were analysed using two and three clusters, respectiv
 <br>
 
 ### Gaussian Mixture Models (GMM)
-Gaussian Mixture Models (GMMs) are probabilistic models for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions by combining simpler ones (From AI4EO_Week_4_Unsupervised_Learning Repository).
-
-Similar to the K-means approach, the Gaussian Mixture Model was applied with two and three components to assess whether increasing the number of clusters improves classification performance.
+Gaussian Mixture Models (GMMs) are probabilistic models that represent normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions by combining simpler ones. Similar to K-means, GMM clustering was applied with two and three components to evaluate whether increasing the number of components improves classification performance, particularly in distinguishing landslide scars from non-affected areas based on NDVI and BSI indices derived from Sentinel-2 imagery.
 
 <div align="center">
   <figure>  
