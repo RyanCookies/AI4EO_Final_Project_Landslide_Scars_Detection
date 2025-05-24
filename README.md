@@ -85,6 +85,57 @@ The package should then be imported along with the other required libraries. For
 ### Sentinel-2 Data
 Sentinel-2 is a satellite mission developed by the European Space Agency (ESA) under the Copernicus Programme, designed to provide high-resolution optical imagery for land monitoring. It captures data in 13 spectral bands ranging from visible to shortwave infrared, with spatial resolutions of 10, 20, and 60 metres depending on the band. This study uses Level-2A (L2A) products, which provide bottom-of-atmosphere (BOA) reflectance data derived from Level-1C top-of-atmosphere (TOA) imagery through atmospheric correction (European Space Agency, n.d.). Since this project requires the shortwave infrared (SWIR) bands, which are not available at 10-metre resolution, all bands were processed at 20-metre resolution to ensure consistency.
 
+<div align="center">
+  <table>
+    <caption style="text-align:center; font-weight:bold;">Sentinel-2 Bands Used in This Project</caption>
+    <tr>
+      <th style="text-align:center;">Band</th>
+      <th style="text-align:center;">Name</th>
+      <th style="text-align:center;">Central Wavelength (nm)</th>
+      <th style="text-align:center;">Resolution</th>
+      <th style="text-align:center;">Use</th>
+    </tr>
+    <tr>
+      <td style="text-align:center;">B02</td>
+      <td style="text-align:center;">Blue</td>
+      <td style="text-align:center;">490</td>
+      <td style="text-align:center;">20 m</td>
+      <td style="text-align:center;">Use in RGB and BSI</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">B03</td>
+      <td style="text-align:center;">Green</td>
+      <td style="text-align:center;">560</td>
+      <td style="text-align:center;">20 m</td>
+      <td style="text-align:center;">Use in RGB</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">B04</td>
+      <td style="text-align:center;">Red</td>
+      <td style="text-align:center;">665</td>
+      <td style="text-align:center;">20 m</td>
+      <td style="text-align:center;">Use in RGB, NDVI, and BSI</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">B8A</td>
+      <td style="text-align:center;">NIR</td>
+      <td style="text-align:center;">865</td>
+      <td style="text-align:center;">20 m</td>
+      <td style="text-align:center;">Use in NDVI</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">B11</td>
+      <td style="text-align:center;">SWIR</td>
+      <td style="text-align:center;">1610</td>
+      <td style="text-align:center;">20 m</td>
+      <td style="text-align:center;">Use in BSI</td>
+    </tr>
+  </table>
+</div>
+
+
+
+
 To fetch the data, you must create an account on the Copernicus Open Access Hub and input your login credentials in the "Fetching Data" section of the code.
 
 ```python
