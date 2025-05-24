@@ -192,10 +192,13 @@ The Sentinel-2 images used in this study exhibited spatial misalignment, particu
 ## Normalised Difference Vegetation Index (NDVI) Mask
 After aligning the pre- and post-earthquake images, a ground truth was defined using a traditional threshold-based NDVI method. Areas with a decrease in NDVI greater than 0.2 (i.e. $\Delta NDVI < –0.2$ ), indicating vegetation loss, were identified and used to generate a landslide scar mask.
 
-<p align="center">
-  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/>
+<div align="center">
+  <figure>  
+  <img src="Figures/NDVI_mask.jpg" width="1200" height="auto"/><br>
   <figcaption style="text-align:center;">The NDVI of pre-earthquake and aligned post-earthquake and the NDVI mask.</figcaption>
-</p>
+  </figure>
+</div>
+<br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -210,7 +213,17 @@ $$
 $$
 
 ### K-Means
-K-means clustering is an unsupervised learning algorithm that partitions a dataset into k predefined clusters based on feature similarity (MacQueen, 1967). The algorithm assigns each data point to the nearest centroid, aiming to minimise within-cluster variance. In this project, K-means clustering was applied to differentiate landslide scars from non-affected areas based on NDVI and BSI indices derived from pre- and post-earthquake Sentinel-2 imagery. Two scenarios were examined: clustering with two and three clusters, respectively. This approach was used to assess whether adding an extra cluster improves performance, particularly by reducing misclassification of vegetation with varying reflectance as bare soil.
+K-means clustering is an unsupervised learning algorithm that partitions a dataset into k predefined clusters based on feature similarity (MacQueen, 1967). The algorithm assigns each data point to the nearest centroid, aiming to minimise within-cluster variance.
+
+<div align="center">
+  <figure>  
+  <img src="Figures/K-Means.jpg" width="800" height="auto"/><br>
+  <figcaption style="text-align:center;">Schematic plot of K-Means clustering. This schematic illustrates the concept of K-means clustering, where data points are grouped into clusters. Each cluster is represented by a sphere around a centroid, with points grouped based on their proximity to the centroids.</figcaption>
+  </figure>
+</div>
+<br>
+
+In this project, K-means clustering was applied to differentiate landslide scars from non-affected areas based on NDVI and BSI indices derived from pre- and post-earthquake Sentinel-2 imagery. Two scenarios were examined: clustering with two and three clusters, respectively. This approach was used to assess whether adding an extra cluster improves performance, particularly by reducing misclassification of vegetation with varying reflectance as bare soil.
 
 <div align="center">
   <figure>  
@@ -228,7 +241,17 @@ K-means clustering is an unsupervised learning algorithm that partitions a datas
 <br>
 
 ### Gaussian Mixture Models (GMM)
-Gaussian Mixture Models (GMMs) are probabilistic models that represent normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions by combining simpler ones. Similar to K-means, GMM clustering was applied with two and three components to evaluate whether increasing the number of components improves classification performance, particularly in distinguishing landslide scars from non-affected areas based on NDVI and BSI indices derived from Sentinel-2 imagery.
+Gaussian Mixture Models (GMMs) are probabilistic models that represent normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions by combining simpler ones. 
+
+<div align="center">
+  <figure>  
+  <img src="Figures/GMM.jpg" width="800" height="auto"/><br>
+  <figcaption style="text-align:center;">Schematic plot of Gaussian Mixture Model (GMM) clustering. This schematic shows how GMM clustering models each cluster as an elliptical Gaussian distribution. Clusters can differ in shape, size, and orientation, and data points are assigned probabilistically based on their likelihood of belonging to each distribution.
+  </figure>
+</div>
+<br>
+    
+Similar to K-means, GMM clustering was applied with two and three components to evaluate whether increasing the number of components improves classification performance, particularly in distinguishing landslide scars from non-affected areas based on NDVI and BSI indices derived from Sentinel-2 imagery.
 
 <div align="center">
   <figure>  
