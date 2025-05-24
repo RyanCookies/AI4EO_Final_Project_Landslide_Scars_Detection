@@ -1,4 +1,5 @@
 # Detection of Earthquake-Induced Landslides Using Unsupervised Learning
+This project applies unsupervised learning methods (K-means and GMM) on Sentinel-2 imagery to detect earthquake-induced landslide scars.
 
 <div align="center">
   <figure>
