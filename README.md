@@ -1,8 +1,11 @@
 # Detection of Earthquake-Induced Landslides Using Unsupervised Learning
 
-<p align="center">
-  <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/>
-</p>
+<div align="center">
+  <figure>
+  <img src="Figures/AI4EO_Final_Project_infographic.jpg" width="1600" height="auto"/><br>
+  </figure>
+</div>
+<br>
 
 <details>
   <summary><b>Table of Contents</b></summary>
@@ -51,6 +54,10 @@ $$
 $$
 
 Since healthy vegetation strongly reflects near-infrared radiation and absorbs red light, NDVI uses these spectral bands to quantify vegetation density. Analysing changes in NDVI before and after the earthquake enables preliminary identification of landslide-affected areas (e.g., Saito et al., 2022; Yunus et al., 2020). However, because vegetation reflectance varies with local conditions, the traditional threshold-based NDVI method requires prior knowledge of vegetation characteristics (Yang et al., 2019). To address this limitation, this study applies unsupervised learning using K-means and Gaussian Mixture Models as an exploratory approach to evaluate whether artificial intelligence can reliably detect landslide scars without prior knowledge of the local environment.
+
+<p align="center">
+  <img src="Figures/RGB_pre_post_EQ.jpg" width="800" height="auto"/>
+</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
