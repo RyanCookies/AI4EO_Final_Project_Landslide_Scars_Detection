@@ -304,6 +304,8 @@ According to Greenhouse Gas Reporting: Conversion Factors 2022 (Department for E
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Video Tutorial
+[![Watch the presentation video](https://img.youtube.com/vi/YHw5sdUDLlM/0.jpg)](https://youtu.be/YHw5sdUDLlM)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## References
